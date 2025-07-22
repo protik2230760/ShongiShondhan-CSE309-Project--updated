@@ -1,0 +1,252 @@
+/* Messages Page Specific Styles */
+:root {
+  --primary-color: #4e73df;
+  --hover-color: #2e59d9;
+  --background-gradient: linear-gradient(to right, #4e73df, #224abe);
+  --card-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+  --message-outgoing-bg: #4e73df;
+  --message-incoming-bg: #f8f9fc;
+  --message-time-color: #858796;
+}
+
+/* Body Styles */
+body {
+  min-height: 100vh;
+  background-color: #f8f9fc !important;
+}
+
+/* Card Styles */
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+/* Chat Header Styles */
+.card-header {
+  background: var(--background-gradient) !important;
+  border: none;
+}
+
+.chat-avatar {
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.card-header small {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.card-header small i {
+  font-size: 0.6rem;
+  margin-right: 5px;
+}
+
+/* Chat Box Styles */
+.chat-box {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+
+/* Message Groups */
+.message-group {
+  margin-bottom: 1rem;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.message-group.timestamp {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.message-group.timestamp small {
+  background: #f8f9fc;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  color: var(--message-time-color);
+  font-size: 0.8rem;
+}
+
+.message-group.timestamp i {
+  margin-right: 5px;
+}
+
+/* Message Styles */
+.message {
+  max-width: 80%;
+  margin-bottom: 0.5rem;
+}
+
+.message-content {
+  padding: 0.75rem 1rem;
+  border-radius: 15px;
+  position: relative;
+}
+
+.message-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Outgoing Messages */
+.message-group.outgoing {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.message-group.outgoing .message-content {
+  background: var(--message-outgoing-bg);
+  color: white;
+  border-bottom-right-radius: 5px;
+}
+
+/* Incoming Messages */
+.message-group.incoming {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.message-group.incoming .message-content {
+  background: var(--message-incoming-bg);
+  color: #5a5c69;
+  border-bottom-left-radius: 5px;
+}
+
+/* Message Time */
+.message-time {
+  font-size: 0.75rem;
+  color: var(--message-time-color);
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.message-time i {
+  font-size: 0.8rem;
+  margin-right: 3px;
+}
+
+/* Message Form */
+.message-form {
+  padding: 1rem;
+  background: white;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+  background: white;
+  border-radius: 25px;
+  padding: 0.25rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 25px !important;
+  font-size: 0.95rem;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.input-group .btn {
+  border-radius: 50% !important;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background-gradient);
+  border: none;
+  margin-left: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.input-group .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(78, 115, 223, 0.3);
+}
+
+.input-group .btn i {
+  font-size: 1.2rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar Styles */
+.chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 0.5rem;
+  }
+  
+  .chat-box {
+    height: calc(100vh - 2rem);
+  }
+  
+  .message {
+    max-width: 90%;
+  }
+  
+  .card-header {
+    padding: 0.75rem;
+  }
+  
+  .chat-messages {
+    padding: 1rem;
+  }
+}
+
+/* Message Hover Effects */
+.message-content:hover {
+  transform: translateY(-1px);
+  transition: transform 0.2s ease;
+} 

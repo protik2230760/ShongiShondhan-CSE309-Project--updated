@@ -1,0 +1,177 @@
+/* Profile Page Specific Styles */
+:root {
+  --primary-color: #4e73df;
+  --hover-color: #2e59d9;
+  --background-gradient: linear-gradient(to right, #4e73df, #224abe);
+  --card-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+/* Body Styles */
+body {
+  min-height: 100vh;
+  background-color: #f8f9fc !important;
+}
+
+/* Card Styles */
+.card {
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  box-shadow: var(--card-shadow) !important;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Profile Photo Styles */
+.profile-photo-container {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--background-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 4rem;
+  overflow: hidden;
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Form Styles */
+.form-control, .form-select {
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e3e6f0;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+}
+
+/* Label Styles */
+.form-label {
+  font-weight: 500;
+  color: #5a5c69;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-label i {
+  margin-right: 8px;
+  color: var(--primary-color);
+  width: 20px;
+  text-align: center;
+}
+
+/* Button Styles */
+.btn-primary {
+  background: var(--background-gradient);
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary:hover {
+  background: var(--hover-color);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(78, 115, 223, 0.3);
+}
+
+.btn-primary i {
+  margin-right: 8px;
+}
+
+/* File Input Styles */
+.input-group {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.input-group-text {
+  background: var(--background-gradient);
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.input-group-text:hover {
+  background: var(--hover-color);
+}
+
+/* Heading Styles */
+h2 {
+  color: #5a5c69;
+  font-weight: 700;
+}
+
+h2 i {
+  margin-right: 10px;
+  color: var(--primary-color);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .card-body {
+    padding: 2rem !important;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .profile-photo-container {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .profile-photo {
+    font-size: 3rem;
+  }
+  
+  .btn-primary {
+    width: 100%;
+  }
+}
+
+/* Form Row Spacing */
+.row + .row {
+  margin-top: 1rem;
+} 

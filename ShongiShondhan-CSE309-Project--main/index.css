@@ -1,0 +1,322 @@
+/* Home Page Specific Styles */
+:root {
+  --primary-color: #b4929e;
+  --hover-color: #9d8189;
+  --background-gradient: linear-gradient(45deg, #a7c5eb, #b4929e, #e8a9a9);
+  --header-height: 70px;
+  --card-shadow: 0 0.15rem 1.75rem 0 rgba(180, 146, 158, 0.15);
+  --heart-color: #e8a9a9;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+
+/* Header Styles */
+header {
+  background: linear-gradient(45deg, 
+    rgba(167, 197, 235, 0.98),    /* Soft Blue */
+    rgba(180, 146, 158, 0.98),    /* Muted Pink */
+    rgba(232, 169, 169, 0.98)     /* Soft Coral */
+  );
+  background-size: 200% 200%;
+  padding: 1.5rem 0;
+  box-shadow: 0 2px 15px rgba(180, 146, 158, 0.2);
+  animation: gradientAnimation 10s ease infinite;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+header h1 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5px;
+}
+
+header h1 i {
+  color: #b25475;
+  animation: heartBeat 1.5s infinite, colorChange 3s infinite;
+}
+
+@keyframes heartBeat {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.3); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.3); }
+  70% { transform: scale(1); }
+}
+
+/* Navigation Styles */
+nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 30px;
+  backdrop-filter: blur(5px);
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 5px 15px rgba(180, 146, 158, 0.2);
+}
+
+nav a.active {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  box-shadow: 0 5px 15px rgba(180, 146, 158, 0.2);
+}
+
+nav a i {
+  font-size: 1.1rem;
+}
+
+/* Main Content Styles */
+main {
+  flex: 1;
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #ffffff, #f8f9fc);
+}
+
+section.container {
+  max-width: 800px;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(180, 146, 158, 0.1);
+  border: 1px solid rgba(180, 146, 158, 0.1);
+}
+
+section h2 {
+  color: #333333;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+section h2 i {
+  color: #b4929e;
+  margin-right: 0.5rem;
+}
+
+.lead {
+  color: #666666;
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+/* Button Styles */
+.btn {
+  padding: 1rem 2rem;
+  font-weight: 500;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #a7c5eb, #b4929e);
+  border: none;
+  background-size: 200% 200%;
+  animation: gradientAnimation 5s ease infinite;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(45deg, #b4929e, #e8a9a9);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(180, 146, 158, 0.3);
+}
+
+.btn-outline-primary {
+  color: #b4929e;
+  border: 2px solid #b4929e;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background: white;
+}
+
+.btn-outline-primary:hover {
+  background: #b4929e;
+  border-color: #b4929e;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(180, 146, 158, 0.2);
+  color: white;
+}
+
+/* Footer Styles */
+footer {
+  background: white;
+  padding: 1.5rem 0;
+  text-align: center;
+  box-shadow: 0 -2px 15px rgba(180, 146, 158, 0.05);
+  border-top: 1px solid rgba(180, 146, 158, 0.1);
+}
+
+footer p {
+  color: #666666;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  nav a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
+
+  .lead {
+    font-size: 1.1rem;
+  }
+
+  .btn-lg {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  main {
+    padding: 2rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* Background Animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+header {
+  background-size: 200% 200%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+/* Hover Effects */
+.btn i {
+  transition: transform 0.3s ease;
+}
+
+.btn:hover i {
+  transform: translateX(5px);
+} 
+
+/* Glass Effect for Cards */
+.stats-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Enhanced Hover Effects */
+.btn:hover i {
+  transform: translateX(5px);
+  transition: transform 0.3s ease;
+}
+
+/* Additional Animation for Heart Icon */
+@keyframes colorChange {
+  0% { color: #ffffff; }
+  50% { color: rgba(255, 255, 255, 0.8); }
+  100% { color: #ffffff; }
+}
+
+header h1 i {
+  animation: heartBeat 1.5s infinite, colorChange 3s infinite;
+}
+
+/* Glowing Effect for Important Elements */
+.btn-primary:hover {
+  box-shadow: 0 5px 15px rgba(180, 146, 158, 0.3),
+              0 0 30px rgba(232, 169, 169, 0.2);
+} 
+
+/* Color Palette Used:
+  #a7c5eb - Soft Blue
+  #b4929e - Muted Pink
+  #e8a9a9 - Soft Coral
+  #ffffff - Pure White
+  #f8f9fc - Light Gray
+  #333333 - Dark Gray (Text)
+  #666666 - Medium Gray (Secondary Text)
+*/ 

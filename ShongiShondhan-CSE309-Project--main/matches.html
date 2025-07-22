@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Matches | ShongiShondhan</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="matches.css">
+</head>
+<body class="bg-light">
+  <!-- Mobile Navigation Toggle -->
+  <button class="mobile-nav-toggle">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h3><i class="fas fa-heart"></i> ShongiShondhan</h3>
+    </div>
+    
+    <div class="sidebar-profile">
+      <div class="profile-img">
+        <i class="fas fa-user"></i>
+      </div>
+      <h4>Welcome, User!</h4>
+    </div>
+    
+    <div class="sidebar-menu">
+      <a href="profile.html">
+        <i class="fas fa-user-circle"></i> My Profile
+      </a>
+      <a href="matches.html" class="active">
+        <i class="fas fa-users"></i> Matches
+      </a>
+      <a href="search.html">
+        <i class="fas fa-search"></i> Search
+      </a>
+      <a href="messages.html">
+        <i class="fas fa-comments"></i> Messages
+      </a>
+      <a href="login.html">
+        <i class="fas fa-sign-out-alt"></i> Logout
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="container py-5">
+      <div class="text-center mb-5">
+        <div class="matches-icon-container mb-3">
+          <i class="fas fa-users"></i>
+        </div>
+        <h2 class="mb-4"><i class="fas fa-heart"></i> Recommended Matches</h2>
+      </div>
+
+      <div class="row g-4">
+        <!-- Match Card 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="match-card">
+            <div class="match-card-header">
+              <div class="profile-image">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="compatibility-badge">
+                <i class="fas fa-star"></i> 92%
+              </div>
+            </div>
+            <div class="match-card-body">
+              <h3><i class="fas fa-user-circle"></i> Rahim, 26</h3>
+              <div class="match-info">
+                <p><i class="fas fa-map-marker-alt"></i> Dhaka</p>
+                <p><i class="fas fa-graduation-cap"></i> B.Sc. in CSE</p>
+              </div>
+              <div class="match-actions">
+                <button class="btn btn-primary">
+                  <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+                <button class="btn btn-outline-primary">
+                  <i class="fas fa-info-circle"></i> View Profile
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Match Card 2 (Example) -->
+        <div class="col-md-6 col-lg-4">
+          <div class="match-card">
+            <div class="match-card-header">
+              <div class="profile-image">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="compatibility-badge">
+                <i class="fas fa-star"></i> 88%
+              </div>
+            </div>
+            <div class="match-card-body">
+              <h3><i class="fas fa-user-circle"></i> Karim, 28</h3>
+              <div class="match-info">
+                <p><i class="fas fa-map-marker-alt"></i> Chittagong</p>
+                <p><i class="fas fa-graduation-cap"></i> M.Sc. in EEE</p>
+              </div>
+              <div class="match-actions">
+                <button class="btn btn-primary">
+                  <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+                <button class="btn btn-outline-primary">
+                  <i class="fas fa-info-circle"></i> View Profile
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Match Card 3 (Example) -->
+        <div class="col-md-6 col-lg-4">
+          <div class="match-card">
+            <div class="match-card-header">
+              <div class="profile-image">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="compatibility-badge">
+                <i class="fas fa-star"></i> 85%
+              </div>
+            </div>
+            <div class="match-card-body">
+              <h3><i class="fas fa-user-circle"></i> Jabbar, 27</h3>
+              <div class="match-info">
+                <p><i class="fas fa-map-marker-alt"></i> Sylhet</p>
+                <p><i class="fas fa-graduation-cap"></i> BBA</p>
+              </div>
+              <div class="match-actions">
+                <button class="btn btn-primary">
+                  <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+                <button class="btn btn-outline-primary">
+                  <i class="fas fa-info-circle"></i> View Profile
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Custom JavaScript for sidebar toggle -->
+  <script>
+    document.querySelector('.mobile-nav-toggle').addEventListener('click', function() {
+      document.querySelector('.sidebar').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
